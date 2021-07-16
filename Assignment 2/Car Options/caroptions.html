@@ -33,7 +33,7 @@
             </table>
         </div>
 
-        <div class="input_div" id="options">
+        <div class="input_div" id="fact_options">
             <table class="input_form">
                 <th colspan="2">Factory Options</th>
                 <tr>
@@ -41,24 +41,75 @@
                     <td class="price">$1,235.00</td>
                 </tr>
                 <tr>
-                    <td><ul>
+                    <td><label class="label_list" for="combo1"><ul>
                         <li>Power Windows, Doors, Cruise Control</li>
-                    </ul></td>
+                    </ul></label></td>
                 </tr>
                 <tr>
                     <td><input name="factory_options" id="combo2" type="radio" /><label for="combo2">Option Combo #2</label></td>
                     <td class="price">$3,354.00</td>
                 </tr>
                 <tr>
-                    <td><ul>
+                    <td><label class="label_list" for="combo2"><ul>
                         <li>Rear Spoiler and Fog Lamps</li>
                         <li>Keyless Entry -Power Tilt & Slide Moonroof</li>
                         <li>Power Windows, Doors, Cruise Control</li>
-                    </ul></td>
+                    </ul></label></td>
                 </tr>
                 <tr>
                     <td><input name="factory_options" id="no_combo" type="radio" /><label for="no_combo">No Combo</label></td>
                     <td class="price">$0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="input_div" id="deal_options">
+            <table class="input_form">
+                <th colspan="2">Dealer Options</th>
+                <tr>
+                    <td><input name="dealer_options" id="stereo" type="checkbox" /><label for="stereo">Upgraded Stereo System</label></td>
+                    <td class="price">$550.00</td>
+                </tr>
+                <tr>
+                    <td><input name="dealer_options" id="security" type="checkbox" /><label for="security">VIP Security System</label></td>
+                    <td class="price">$399.00</td>
+                </tr>
+                <tr>
+                    <td><input name="dealer_options" id="mirror" type="checkbox" /><label for="mirror">Auto-Dimming Mirror</label></td>
+                    <td class="price">$295.00</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="input_div" id="color">
+            <table class="input_form">
+                <th colspan="2">Choose A Color</th>
+                <tr>
+                    <td><select name="car_color" size="5">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="silver">Silver</option>
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                    </select></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="input_div" id="deal_options">
+            <table class="input_form">
+                <th colspan="2">Total Price</th>
+                <tr>
+                    <td><input name="dealer_options" id="stereo" type="checkbox" /><label for="stereo">Upgraded Stereo System</label></td>
+                    <td class="price">$550.00</td>
+                </tr>
+                <tr>
+                    <td><input name="dealer_options" id="security" type="checkbox" /><label for="security">VIP Security System</label></td>
+                    <td class="price">$399.00</td>
+                </tr>
+                <tr>
+                    <td><input name="dealer_options" id="mirror" type="checkbox" /><label for="mirror">Auto-Dimming Mirror</label></td>
+                    <td class="price">$295.00</td>
                 </tr>
             </table>
         </div>

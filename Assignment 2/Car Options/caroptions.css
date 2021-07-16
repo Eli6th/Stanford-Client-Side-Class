@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 #main {
     display: grid;
     grid-row-start: 1;
@@ -9,18 +13,27 @@
 
 .input_div {
     margin-top: 10px;
-    width: 50%;
+    width: 95%;
+    height: fit-content;
     border: 1px solid black;
-    align-self: center;
+    align-self: top;
 }
 
 #configuration {
     grid-row-start: 1;
     grid-column-start: 1;
 }
-#options {
+#fact_options {
     grid-row-start: 2;
     grid-column-start: 1;
+}
+#deal_options {
+    grid-row-start: 3;
+    grid-column-start: 1;
+}
+#color {
+    grid-row-start: 1;
+    grid-column-start: 2;
 }
 
 .input_form {
@@ -34,6 +47,9 @@
 label {
     margin-left: 5px;
 }
+.label_list{
+    margin-left: 0px;
+}
 .price {
     text-align: right;
 }
@@ -43,4 +59,9 @@ th {
     color: white;
     background-color: gray;
     border: 1px solid black;
+}
+
+select {
+    width: 100px;
+    overflow-y: hidden;
 }

@@ -8,7 +8,6 @@ body {
     display: grid;
     grid-template-columns: 400px, 360px, 240px;
     grid-template-rows: auto;
-
 }
 
 .divide-double {
