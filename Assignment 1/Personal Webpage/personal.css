@@ -1,0 +1,26 @@
+* {
+    font-family: sans-serif;
+}
+
+img {
+    float: left;
+    margin: 0px 30px 0px 10px;
+}
+
+p, ul, h4 {
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.heading {
+    text-align: center;
+}
+
+.Stanford {
+    color: red;
+    font-weight: bold;
+}
