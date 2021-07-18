@@ -65,7 +65,12 @@ Emmett Brown
         
         document.getElementById("graduate").addEventListener(
             "click",
-            graduateEveryone
+            () => {
+                var graduatedArray = students.map((student) => {
+                    return "Dr. " + student;
+                });
+                document.getElementById("students").value = graduatedArray.join("\n");
+            }
         )
     </script>
 </body>
