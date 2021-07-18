@@ -10,24 +10,24 @@
 <body>
     <h1>Configure Your GT Super Sportscar</h1>
     
-    <div id="main"> 
+    <div id="main">
         <div class="input_div" id="configuration">
             <table class="input_form">
                 <th colspan="2">Configuration</th>
                 <tr>
-                    <td><input name="car_configuration" id="GT_Manual" type="radio" /><label for="GT_Manual">GT Manual</label></td>
+                    <td><input name="car_configuration" id="GT_Manual" type="radio" onclick="carConfiguration(GT_Manual)" /><label for="GT_Manual">GT Manual</label></td>
                     <td class="price">$17,790.00</td>
                 </tr>
                 <tr>
-                    <td><input name="car_configuration" id="GT_Automatic" type="radio" /><label for="GT_Automatic">GT Automatic</label></td>
+                    <td><input name="car_configuration" id="GT_Automatic" type="radio" onclick="carConfiguration(GT_Automatic)" /><label for="GT_Automatic">GT Automatic</label></td>
                     <td class="price">$18,590.00</td>
                 </tr>
                 <tr>
-                    <td><input name="car_configuration" id="GT-S_Manual" type="radio" /><label for="GT-S_Manual">GT-S Manual</label></td>
+                    <td><input name="car_configuration" id="GT_S_Manual" type="radio" onclick="carConfiguration(GT_S_Manual)" /><label for="GT_S_Manual">GT-S Manual</label></td>
                     <td class="price">$22,455.00</td>
                 </tr>
                 <tr>
-                    <td><input name="car_configuration" id="GT-S_Sportshift" type="radio" /><label for="GT-S_Sportshift">GT-S Sportshift</label></td>
+                    <td><input name="car_configuration" id="GT_S_Sportshift" type="radio" onclick="carConfiguration(GT_S_Sportshift)" /><label for="GT_S_Sportshift">GT-S Sportshift</label></td>
                     <td class="price">$23,155.00</td>
                 </tr>
             </table>
@@ -37,7 +37,7 @@
             <table class="input_form">
                 <th colspan="2">Factory Options</th>
                 <tr>
-                    <td><input name="factory_options" id="combo1" type="radio" /><label for="combo1">Option Combo #1</label></td>
+                    <td><input name="factory_options" id="combo1" type="radio" onclick="factOptions(combo1)" /><label for="combo1">Option Combo #1</label></td>
                     <td class="price">$1,235.00</td>
                 </tr>
                 <tr>
@@ -46,7 +46,7 @@
                     </ul></label></td>
                 </tr>
                 <tr>
-                    <td><input name="factory_options" id="combo2" type="radio" /><label for="combo2">Option Combo #2</label></td>
+                    <td><input name="factory_options" id="combo2" type="radio" onclick="factOptions(combo2)" /><label for="combo2">Option Combo #2</label></td>
                     <td class="price">$3,354.00</td>
                 </tr>
                 <tr>
@@ -57,7 +57,7 @@
                     </ul></label></td>
                 </tr>
                 <tr>
-                    <td><input name="factory_options" id="no_combo" type="radio" /><label for="no_combo">No Combo</label></td>
+                    <td><input name="factory_options" id="no_combo" type="radio" onclick="factOptions(no_combo)" /><label for="no_combo">No Combo</label></td>
                     <td class="price">$0</td>
                 </tr>
             </table>
@@ -67,15 +67,15 @@
             <table class="input_form">
                 <th colspan="2">Dealer Options</th>
                 <tr>
-                    <td><input name="dealer_options" id="stereo" type="checkbox" /><label for="stereo">Upgraded Stereo System</label></td>
+                    <td><input name="dealer_options" id="stereo" type="checkbox" onclick="dealOptions()" /><label for="stereo">Upgraded Stereo System</label></td>
                     <td class="price">$550.00</td>
                 </tr>
                 <tr>
-                    <td><input name="dealer_options" id="security" type="checkbox" /><label for="security">VIP Security System</label></td>
+                    <td><input name="dealer_options" id="security" type="checkbox" onclick="dealOptions()" /><label for="security">VIP Security System</label></td>
                     <td class="price">$399.00</td>
                 </tr>
                 <tr>
-                    <td><input name="dealer_options" id="mirror" type="checkbox" /><label for="mirror">Auto-Dimming Mirror</label></td>
+                    <td><input name="dealer_options" id="mirror" type="checkbox" onclick="dealOptions()" /><label for="mirror">Auto-Dimming Mirror</label></td>
                     <td class="price">$295.00</td>
                 </tr>
             </table>
@@ -86,33 +86,30 @@
                 <th colspan="2">Choose A Color</th>
                 <tr>
                     <td><select name="car_color" size="5">
-                        <option value="red">Red</option>
-                        <option value="blue">Blue</option>
-                        <option value="silver">Silver</option>
-                        <option value="white">White</option>
-                        <option value="black">Black</option>
+                        <option value="red" onclick="changeColor(1)">Red</option>
+                        <option value="blue" onclick="changeColor(2)">Blue</option>
+                        <option value="silver" onclick="changeColor(3)">Silver</option>
+                        <option value="white" onclick="changeColor(4)">White</option>
+                        <option value="black" onclick="changeColor(5)">Black</option>
                     </select></td>
+                    <td><img id="car_img" src="images/red.jpg" /></td>
                 </tr>
             </table>
         </div>
 
-        <div class="input_div" id="deal_options">
+        <div class="input_div" id="total_price">
             <table class="input_form">
                 <th colspan="2">Total Price</th>
                 <tr>
-                    <td><input name="dealer_options" id="stereo" type="checkbox" /><label for="stereo">Upgraded Stereo System</label></td>
-                    <td class="price">$550.00</td>
+                    <td><h4 id="output_price">$0.00</h4></td>
                 </tr>
                 <tr>
-                    <td><input name="dealer_options" id="security" type="checkbox" /><label for="security">VIP Security System</label></td>
-                    <td class="price">$399.00</td>
-                </tr>
-                <tr>
-                    <td><input name="dealer_options" id="mirror" type="checkbox" /><label for="mirror">Auto-Dimming Mirror</label></td>
-                    <td class="price">$295.00</td>
+                    <td><button id="calculate" name="calculate" onclick="calculateTotalPrice()">Calculate Total Price</button></td>
                 </tr>
             </table>
         </div>
     </div>
+
+    <script src="caroptions.js"></script>
 </body>
 </html>

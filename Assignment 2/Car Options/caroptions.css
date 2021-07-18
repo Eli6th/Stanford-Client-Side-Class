@@ -35,6 +35,10 @@ body {
     grid-row-start: 1;
     grid-column-start: 2;
 }
+#total_price {
+    grid-row-start: 4;
+    grid-column-start: 1;
+}
 
 .input_form {
     width: 95%;
@@ -64,4 +68,10 @@ th {
 select {
     width: 100px;
     overflow-y: hidden;
+}
+#car_img {
+    height: 80%;
+}
+#output_price {
+    width: 100%;
 }
