@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="college_info.css">
+    <script src="college_info.js"></script>
+    <title>College Information</title>
+</head>
+<body>
+    <h1>Bay Area Colleges and Universities</h1>
+
+    <div id="col1">
+        <table id="colleges_data">
+            <tr class="zebra">
+                <th>Name</th>
+                <th>SAT High</th>
+                <th>SAT Low</th>
+                <th>Tuition</th>
+            </tr>
+            <tr class="zebra">
+                <td class="college_point">Stanford</td>
+                <td class="college_point">1570</td>
+                <td class="college_point">1380</td>
+                <td class="college_point">44757</td>
+            </tr>
+            <tr class="zebra">
+                <td class="college_point">UC Berkeley</td>
+                <td class="college_point">1500</td>
+                <td class="college_point">1250</td>
+                <td class="college_point">13844</td>
+            </tr>
+            <tr class="zebra">
+                <td class="college_point">UC Santa Cruz</td>
+                <td class="college_point">1280</td>
+                <td class="college_point">1000</td>
+                <td class="college_point">13398</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="col2">
+        <table id="search_table">
+            <tr>
+                <th colspan="3">Search Criteria</th>
+            </tr>
+            <tr>
+                <td class="search_cols"><input name="school_type" id="public" type="radio" /><label for="public">Public</label></td>
+                <td class="search_cols"><input name="school_type" id="private" type="radio" /><label for="private">Private</label></td>
+                <td class="search_cols"><input name="school_type" id="dc" type="radio" /><label for="dc">Don't care</label></td>
+            </tr>
+            <tr>
+                <td class="search_cols" colspan="2"><label for="max_tuition">Maximum Tuition <br /> <span class="caption">leave blank for don't care</span></label></td>
+                <td class="search_cols" class="search_inputs"><input name="max_tuition" id="max_tuition" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="search_cols" colspan="2"><label for="max_high_sat">Maximum High SAT <br /> <span class="caption">leave blank for don't care</span></label></td>
+                <td class="search_cols" class="search_inputs"><input name="max_high_sat" id="max_high_sat" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="search_cols" colspan="2"><label for="max_low_sat">Maximum Low SAT <br /> <span class="caption">leave blank for don't care</span></label></td>
+                <td class="search_cols" class="search_inputs"><input name="max_low_sat" id="max_low_sat" type="text" /></td>
+            </tr>
+        </table>
+        <button id="search" onclick="display(univArray)">Search</button>
+    </div>
+</body>
+</html>
