@@ -1,0 +1,74 @@
+body {
+    display: grid;
+    font-family: sans-serif;
+}
+
+h1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+#col1 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+#col2 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+}
+
+table {
+    border: 1px solid black;
+}
+td {
+    padding-left: 5px;
+}
+th {
+    background-color: grey;
+    color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+input[type="text"] {
+    width: 100px;
+}
+
+#colleges_data, .college_point {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-collapse: collapse;
+}
+.zebra:nth-child(odd) {
+    background-color: lightgrey;
+}
+.college_point {
+    width: 25%;
+}
+#colleges_data {
+    width: 70%;
+}
+
+#search_table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.caption {
+    font-size: x-small;
+}
+.search_cols {
+    white-space: nowrap;
+}
+.search_cols:nth-child(even) {
+    padding-right: 5px;
+}
+#search {
+    margin-top: 10px;
+    width: 50%;
+}
