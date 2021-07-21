@@ -19,6 +19,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    vertical-align: top;
 
     margin: auto;
 }
@@ -53,6 +54,9 @@ input[type="text"] {
 }
 #colleges_data {
     width: 70%;
+}
+.price::before {
+    content: "$";
 }
 
 #search_table {
