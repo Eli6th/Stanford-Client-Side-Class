@@ -47,22 +47,18 @@ function compare(chosenSchoolType, max_tuition, SAT_high, SAT_low) {
     for (var i = 0; i < univArray.length; i++) {
         var shouldAdd = true;
         if (chosenSchoolType != undefined && chosenSchoolType != 'dc' && chosenSchoolType != univArray[i].ownership) {
-            alert("Stopped 1");
             shouldAdd = false;
         }
 
         if (max_tuition != "" && max_tuition <= univArray[i].tuition) {
-            alert("Stopped 2");
             shouldAdd = false;
         }
                 
         if (SAT_high != "" && SAT_high <= univArray[i].SATh) {
-            alert("Stopped 3");
             shouldAdd = false;
         }
 
         if (SAT_low != "" && SAT_low >= univArray[i].SATl) {
-            alert("Stopped 4");
             shouldAdd = false;
         }
         
@@ -80,7 +76,6 @@ function search() {
     for (var i = 0; i < school_types.length; i++) {
         if (school_types[i].checked) {
             chosenSchoolType = school_types[i].id;
-            alert(chosenSchoolType);
         }
     }
 
@@ -92,11 +87,6 @@ function search() {
 
     var SAT_low = document.getElementById('max_low_sat').value;
     var fSAT_low = parseFloat(SAT_low);
-
-    alert("Max tuition: " + max_tuition);
-    alert("High SAT: " + SAT_high);
-    alert("Low SATn: " + SAT_low);
-    alert("School Type: " + chosenSchoolType);
 
     var display_schools = compare(chosenSchoolType, fMax_tuition, fSAT_high, fSAT_low);
     display(display_schools);
